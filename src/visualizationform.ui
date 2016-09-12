@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VisualizationForm</class>
+ <widget class="QWidget" name="VisualizationForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="Title">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>10</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tactile Sensor Visualization Page</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="testLabel">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>140</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="ViewComboBox">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>90</y>
+     <width>145</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Static Data (3D)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dynamic Data</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>High Sensitivity Data</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Static Data (all sensors)</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>68</y>
+     <width>46</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>View:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>0</y>
+     <width>20</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sensorArm1Label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>181</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SensorArm1ComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>2</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Visualization Parameters</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="arm1Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>162</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Arm #1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sensorArm2Label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>264</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SensorArm2ComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>283</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="arm2Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>245</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Arm #2</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SensorArm3ComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="arm3Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>332</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Arm #3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sensorArm3Label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>351</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor:</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>132</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="textNoticeLabel">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>470</y>
+     <width>121</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Note:   Logging and visualizing dynamic data at the same time can affect the data acquisition rate.</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetPushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="visualizeArm1CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>161</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="visualizeArm2CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>244</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="visualizeArm3CheckBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>330</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="displayValuesCheckbox">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>120</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Display taxel values</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal1">
+   <property name="geometry">
+    <rect>
+     <x>468</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal2">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal3">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal4">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal6">
+   <property name="geometry">
+    <rect>
+     <x>468</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal9">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal7">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal8">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal11">
+   <property name="geometry">
+    <rect>
+     <x>468</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal14">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal12">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal13">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="Line" name="lineTableUp">
+   <property name="geometry">
+    <rect>
+     <x>465</x>
+     <y>60</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableDown">
+   <property name="geometry">
+    <rect>
+     <x>464</x>
+     <y>142</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableRight">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>68</y>
+     <width>20</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableLeft">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>68</y>
+     <width>20</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableRight2">
+   <property name="geometry">
+    <rect>
+     <x>943</x>
+     <y>67</y>
+     <width>16</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal7">
+   <property name="geometry">
+    <rect>
+     <x>763</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal6">
+   <property name="geometry">
+    <rect>
+     <x>713</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal12">
+   <property name="geometry">
+    <rect>
+     <x>763</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableDown2">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>140</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal9">
+   <property name="geometry">
+    <rect>
+     <x>863</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal2">
+   <property name="geometry">
+    <rect>
+     <x>763</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal13">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal3">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="Line" name="lineTableUp2">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>60</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="LineTableLeft2">
+   <property name="geometry">
+    <rect>
+     <x>701</x>
+     <y>67</y>
+     <width>20</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal14">
+   <property name="geometry">
+    <rect>
+     <x>863</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal8">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal11">
+   <property name="geometry">
+    <rect>
+     <x>713</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal1">
+   <property name="geometry">
+    <rect>
+     <x>713</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal4">
+   <property name="geometry">
+    <rect>
+     <x>863</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StandardDeviationLabel">
+   <property name="geometry">
+    <rect>
+     <x>713</x>
+     <y>50</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Standard Deviation:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="AverageValuesCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>468</x>
+     <y>50</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Show average values on 1 sec</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="FreezePushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>443</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SumOfAllTaxelsAvgValueLabel">
+   <property name="geometry">
+    <rect>
+     <x>637</x>
+     <y>163</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SumOfAllTaxelsAvgLabel">
+   <property name="geometry">
+    <rect>
+     <x>526</x>
+     <y>160</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Average of all taxels: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SumOfAllTaxelsStdValueLabel">
+   <property name="geometry">
+    <rect>
+     <x>881</x>
+     <y>163</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SumOfAllTaxelsStdLabel">
+   <property name="geometry">
+    <rect>
+     <x>711</x>
+     <y>160</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Standard deviation of all taxels: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor1Label">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>60</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor2Label">
+   <property name="geometry">
+    <rect>
+     <x>473</x>
+     <y>190</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor3Label">
+   <property name="geometry">
+    <rect>
+     <x>473</x>
+     <y>320</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor5Label">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>300</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 5</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor4Label">
+   <property name="geometry">
+    <rect>
+     <x>852</x>
+     <y>180</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 4</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor6Label">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>410</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 6</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor7Label">
+   <property name="geometry">
+    <rect>
+     <x>239</x>
+     <y>180</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 7</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor8Label">
+   <property name="geometry">
+    <rect>
+     <x>291</x>
+     <y>300</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 8</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor9Label">
+   <property name="geometry">
+    <rect>
+     <x>342</x>
+     <y>410</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 9</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor10Label">
+   <property name="geometry">
+    <rect>
+     <x>441</x>
+     <y>487</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sensor 10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CurrentFrequencyLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>515</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Current Frequency</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="STFACheckbox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>530</y>
+     <width>261</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Show Fast Fourier Transform (FFT)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="testLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>290</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ExportGraphPushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>466</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Export graph</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="MaxCountLabel">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>525</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Count max:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="MaxCountSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>523</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="minimum">
+    <number>2000</number>
+   </property>
+   <property name="maximum">
+    <number>12500</number>
+   </property>
+   <property name="singleStep">
+    <number>250</number>
+   </property>
+   <property name="value">
+    <number>5000</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RotateLeftPushButton">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>464</y>
+     <width>32</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rx-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RotateDownPushButton">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>488</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rz-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RotateRightPushButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>464</y>
+     <width>32</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rx+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RotateUpPushButton">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>440</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rz+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal18">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal17">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal19">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal16">
+   <property name="geometry">
+    <rect>
+     <x>468</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal15">
+   <property name="geometry">
+    <rect>
+     <x>662</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal20">
+   <property name="geometry">
+    <rect>
+     <x>662</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal10">
+   <property name="geometry">
+    <rect>
+     <x>662</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TaxelVal5">
+   <property name="geometry">
+    <rect>
+     <x>662</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal16">
+   <property name="geometry">
+    <rect>
+     <x>713</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal18">
+   <property name="geometry">
+    <rect>
+     <x>813</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal19">
+   <property name="geometry">
+    <rect>
+     <x>863</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal17">
+   <property name="geometry">
+    <rect>
+     <x>763</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal10">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>90</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal20">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>130</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal5">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>70</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="STDVal15">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>110</y>
+     <width>46</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>testLabel_2</zorder>
+  <zorder>Title</zorder>
+  <zorder>testLabel</zorder>
+  <zorder>ViewComboBox</zorder>
+  <zorder>label</zorder>
+  <zorder>line</zorder>
+  <zorder>sensorArm1Label</zorder>
+  <zorder>SensorArm1ComboBox</zorder>
+  <zorder>label_3</zorder>
+  <zorder>arm1Label</zorder>
+  <zorder>sensorArm2Label</zorder>
+  <zorder>SensorArm2ComboBox</zorder>
+  <zorder>arm2Label</zorder>
+  <zorder>SensorArm3ComboBox</zorder>
+  <zorder>arm3Label</zorder>
+  <zorder>sensorArm3Label</zorder>
+  <zorder>line_2</zorder>
+  <zorder>textNoticeLabel</zorder>
+  <zorder>resetPushButton</zorder>
+  <zorder>visualizeArm1CheckBox</zorder>
+  <zorder>visualizeArm2CheckBox</zorder>
+  <zorder>visualizeArm3CheckBox</zorder>
+  <zorder>displayValuesCheckbox</zorder>
+  <zorder>TaxelVal1</zorder>
+  <zorder>TaxelVal2</zorder>
+  <zorder>TaxelVal3</zorder>
+  <zorder>TaxelVal4</zorder>
+  <zorder>TaxelVal6</zorder>
+  <zorder>TaxelVal9</zorder>
+  <zorder>TaxelVal7</zorder>
+  <zorder>TaxelVal8</zorder>
+  <zorder>TaxelVal11</zorder>
+  <zorder>TaxelVal14</zorder>
+  <zorder>TaxelVal12</zorder>
+  <zorder>TaxelVal13</zorder>
+  <zorder>lineTableUp</zorder>
+  <zorder>LineTableDown</zorder>
+  <zorder>LineTableRight</zorder>
+  <zorder>LineTableLeft</zorder>
+  <zorder>LineTableRight2</zorder>
+  <zorder>STDVal7</zorder>
+  <zorder>STDVal6</zorder>
+  <zorder>STDVal12</zorder>
+  <zorder>LineTableDown2</zorder>
+  <zorder>STDVal9</zorder>
+  <zorder>STDVal2</zorder>
+  <zorder>STDVal13</zorder>
+  <zorder>STDVal3</zorder>
+  <zorder>lineTableUp2</zorder>
+  <zorder>LineTableLeft2</zorder>
+  <zorder>STDVal14</zorder>
+  <zorder>STDVal8</zorder>
+  <zorder>STDVal11</zorder>
+  <zorder>STDVal1</zorder>
+  <zorder>STDVal4</zorder>
+  <zorder>StandardDeviationLabel</zorder>
+  <zorder>AverageValuesCheckBox</zorder>
+  <zorder>FreezePushButton</zorder>
+  <zorder>SumOfAllTaxelsAvgValueLabel</zorder>
+  <zorder>SumOfAllTaxelsAvgLabel</zorder>
+  <zorder>SumOfAllTaxelsStdValueLabel</zorder>
+  <zorder>SumOfAllTaxelsStdLabel</zorder>
+  <zorder>Sensor1Label</zorder>
+  <zorder>Sensor2Label</zorder>
+  <zorder>Sensor3Label</zorder>
+  <zorder>Sensor5Label</zorder>
+  <zorder>Sensor4Label</zorder>
+  <zorder>Sensor6Label</zorder>
+  <zorder>Sensor7Label</zorder>
+  <zorder>Sensor8Label</zorder>
+  <zorder>Sensor9Label</zorder>
+  <zorder>Sensor10Label</zorder>
+  <zorder>CurrentFrequencyLabel</zorder>
+  <zorder>STFACheckbox</zorder>
+  <zorder>ExportGraphPushButton</zorder>
+  <zorder>MaxCountLabel</zorder>
+  <zorder>MaxCountSpinBox</zorder>
+  <zorder>RotateLeftPushButton</zorder>
+  <zorder>RotateDownPushButton</zorder>
+  <zorder>RotateRightPushButton</zorder>
+  <zorder>RotateUpPushButton</zorder>
+  <zorder>TaxelVal18</zorder>
+  <zorder>TaxelVal17</zorder>
+  <zorder>TaxelVal19</zorder>
+  <zorder>TaxelVal16</zorder>
+  <zorder>TaxelVal15</zorder>
+  <zorder>TaxelVal20</zorder>
+  <zorder>TaxelVal10</zorder>
+  <zorder>TaxelVal5</zorder>
+  <zorder>STDVal16</zorder>
+  <zorder>STDVal18</zorder>
+  <zorder>STDVal19</zorder>
+  <zorder>STDVal17</zorder>
+  <zorder>STDVal10</zorder>
+  <zorder>STDVal20</zorder>
+  <zorder>STDVal5</zorder>
+  <zorder>STDVal15</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

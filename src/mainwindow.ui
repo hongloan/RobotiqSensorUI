@@ -1,0 +1,2120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>455</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>652</width>
+         <height>396</height>
+        </rect>
+       </property>
+       <widget class="QTabWidget" name="ConfigurationTabWidget">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>1</y>
+          <width>638</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="generalTab">
+         <attribute name="title">
+          <string>General</string>
+         </attribute>
+         <widget class="QLabel" name="HandPictureLabel">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>3</y>
+            <width>131</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../images/images.qrc">:/S6Picture.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="configurationGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>27</y>
+            <width>281</width>
+            <height>85</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Configuration</string>
+          </property>
+          <widget class="QSpinBox" name="numberOfArmsSpinBox">
+           <property name="geometry">
+            <rect>
+             <x>161</x>
+             <y>20</y>
+             <width>41</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>3</number>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="startAcquisitionPushButton">
+          <property name="geometry">
+           <rect>
+            <x>52</x>
+            <y>310</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Start Acquisition and Visualization</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="dataGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>180</y>
+            <width>281</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Data Settings</string>
+          </property>
+          <widget class="QSplitter" name="splitter_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>191</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="palette">
+            <palette>
+             <active>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </active>
+             <inactive>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </inactive>
+             <disabled>
+              <colorrole role="Base">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Window">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </disabled>
+            </palette>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="browseDirectoryPushButton">
+           <property name="geometry">
+            <rect>
+             <x>194</x>
+             <y>80</y>
+             <width>71</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Browse...</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="directoryLocationLineEdit">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>80</y>
+             <width>171</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="enableLoggingCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>50</y>
+             <width>161</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable Data Logging</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="enableVisualizationCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>181</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable Data Visualization</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="loggingSettingsPushButton">
+           <property name="geometry">
+            <rect>
+             <x>194</x>
+             <y>50</y>
+             <width>71</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Settings...</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="stopAcquisitionPushButton">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>310</y>
+            <width>221</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Stop</string>
+          </property>
+         </widget>
+         <widget class="Line" name="line">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>67</y>
+            <width>261</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="communicationSettingsGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>120</y>
+            <width>281</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Communication Settings</string>
+          </property>
+          <widget class="QCheckBox" name="AutoDetectCommunicationSettingsCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>25</y>
+             <width>261</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Auto-detect communication settings</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>84</y>
+             <width>51</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Port 1:</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="ManuallySelectCommunicationPortCheckBox">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>54</y>
+             <width>261</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Manually select communication port:</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="PortSelectionComboBox">
+           <property name="geometry">
+            <rect>
+             <x>79</x>
+             <y>80</y>
+             <width>151</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>Select...</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="Port2Label">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>114</y>
+             <width>51</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Port 2:</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="Port2SelectionComboBox">
+           <property name="geometry">
+            <rect>
+             <x>79</x>
+             <y>110</y>
+             <width>151</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>Select...</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="Port3SelectionComboBox">
+           <property name="geometry">
+            <rect>
+             <x>79</x>
+             <y>140</y>
+             <width>151</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>Select...</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="Port3Label">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>144</y>
+             <width>51</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Port 3:</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="numberOfArmsLabel">
+          <property name="geometry">
+           <rect>
+            <x>42</x>
+            <y>47</y>
+            <width>131</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Number of gripper(s):</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AdressSettingsArm1PushButton">
+          <property name="geometry">
+           <rect>
+            <x>119</x>
+            <y>85</y>
+            <width>111</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Adress Settings...</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AdressSettingsArm2PushButton">
+          <property name="geometry">
+           <rect>
+            <x>119</x>
+            <y>115</y>
+            <width>111</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Adress Settings...</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AdressSettingsArm3PushButton">
+          <property name="geometry">
+           <rect>
+            <x>119</x>
+            <y>145</y>
+            <width>111</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Adress Settings...</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="numberOfSensorsArm1Label">
+          <property name="geometry">
+           <rect>
+            <x>39</x>
+            <y>87</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Gripper #1:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="numberOfSensorsArm1SpinBox">
+          <property name="geometry">
+           <rect>
+            <x>179</x>
+            <y>87</y>
+            <width>41</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="numberOfSensorsArm2SpinBox">
+          <property name="geometry">
+           <rect>
+            <x>179</x>
+            <y>117</y>
+            <width>41</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="numberOfSensorsArm2Label">
+          <property name="geometry">
+           <rect>
+            <x>39</x>
+            <y>117</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Gripper #2:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="numberOfSensorsArm3Label">
+          <property name="geometry">
+           <rect>
+            <x>39</x>
+            <y>147</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Gripper #3:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="numberOfSensorsArm3SpinBox">
+          <property name="geometry">
+           <rect>
+            <x>179</x>
+            <y>147</y>
+            <width>41</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="loggingSettingsTab">
+         <attribute name="title">
+          <string>Logging Settings</string>
+         </attribute>
+         <widget class="QGroupBox" name="arm1LoggingSettingsGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>75</y>
+            <width>511</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Arm #1</string>
+          </property>
+          <widget class="QCheckBox" name="Arm1Sensor7CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor2CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor2Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #1</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor3Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #1</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor4CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor5Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #2</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #3</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor6Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #2</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor1Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #1</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor3CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor5CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor1CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor6CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor4Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #2</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor8Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor8CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor9Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor9CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor10Arm1Label">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Palm</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm1Sensor10CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="arm2LoggingSettingsGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>170</y>
+            <width>511</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Arm #2</string>
+          </property>
+          <widget class="QCheckBox" name="Arm2Sensor7CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor2CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>30</y>
+             <width>16</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor6CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>60</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor1CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor4Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #2</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor4CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor5CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor1Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #1</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor3Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>33</y>
+             <width>61</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #1</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor3CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor5Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #2</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor2Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #1</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor6Arm2Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #2</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor8CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm2Label_2">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor9CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm2Label_3">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm2Sensor10CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm2Label_4">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Palm</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="arm3LoggingSettingsGroupBox">
+          <property name="geometry">
+           <rect>
+            <x>28</x>
+            <y>265</y>
+            <width>511</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Arm #3</string>
+          </property>
+          <widget class="QCheckBox" name="Arm3Sensor7CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor3CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>30</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor4Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>32</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #2</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor1CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>30</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor5Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #2</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor6CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>60</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor2Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #1</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor1Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>33</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #1</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor5CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>30</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor4CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor3Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>32</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #1</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor2CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>30</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor6Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #2</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm3Label">
+           <property name="geometry">
+            <rect>
+             <x>116</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Distal #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor8CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>284</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm3Label_2">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Medial #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor9CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>384</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm3Label_3">
+           <property name="geometry">
+            <rect>
+             <x>316</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Proximal #3</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="Arm3Sensor10CheckBox">
+           <property name="geometry">
+            <rect>
+             <x>484</x>
+             <y>60</y>
+             <width>21</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Sensor7Arm3Label_4">
+           <property name="geometry">
+            <rect>
+             <x>416</x>
+             <y>63</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Palm</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="selectDataTypeLabel">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select which data type to log:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="dataTypeToLogComboBox">
+          <property name="geometry">
+           <rect>
+            <x>232</x>
+            <y>14</y>
+            <width>121</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>Static</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Dynamic</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="selectSensorLabel">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>45</y>
+            <width>171</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select sensors to log:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="SelectAllArm1PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>100</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ClearAllArm1PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>130</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clear all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="SelectAllArm2PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>193</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ClearAllArm2PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>223</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clear all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ClearAllArm3PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>320</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Clear all</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="SelectAllArm3PushButton">
+          <property name="geometry">
+           <rect>
+            <x>550</x>
+            <y>290</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Select all</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>670</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionChange_sensor_ID_restricted"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_Haptics_UI"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionLog_data">
+   <property name="text">
+    <string>Log data...</string>
+   </property>
+  </action>
+  <action name="actionAbout_Haptics_UI">
+   <property name="text">
+    <string>About Robotiq Sensor UI...</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionChange_sensor_ID_restricted">
+   <property name="text">
+    <string>Change sensor ID (restricted)...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../images/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

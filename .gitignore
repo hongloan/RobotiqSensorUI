@@ -1,0 +1,13 @@
+*.swp
+*.o
+*.exe
+*.dll
+*.pro.*
+Makefile*
+[dD]ebug/
+[rR]elease/
+*.Debug
+*.Release
+*~
+*.csv
+ui_*.*
