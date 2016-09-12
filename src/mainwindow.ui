@@ -538,7 +538,7 @@
            <string>Number of gripper(s):</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="AdressSettingsArm1PushButton">
+         <widget class="QPushButton" name="AddressSettingsArm1PushButton">
           <property name="geometry">
            <rect>
             <x>119</x>
@@ -553,10 +553,10 @@
            </font>
           </property>
           <property name="text">
-           <string>Adress Settings...</string>
+           <string>Address Settings...</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="AdressSettingsArm2PushButton">
+         <widget class="QPushButton" name="AddressSettingsArm2PushButton">
           <property name="geometry">
            <rect>
             <x>119</x>
@@ -571,10 +571,10 @@
            </font>
           </property>
           <property name="text">
-           <string>Adress Settings...</string>
+           <string>Address Settings...</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="AdressSettingsArm3PushButton">
+         <widget class="QPushButton" name="AddressSettingsArm3PushButton">
           <property name="geometry">
            <rect>
             <x>119</x>
@@ -589,7 +589,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Adress Settings...</string>
+           <string>Address Settings...</string>
           </property>
          </widget>
          <widget class="QLabel" name="numberOfSensorsArm1Label">

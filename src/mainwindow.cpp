@@ -58,22 +58,22 @@ MainWindow::MainWindow(QWidget *parent) :
     ListOfSensorsPerArms[2][0]=-1;ListOfSensorsPerArms[2][1]=-1;ListOfSensorsPerArms[2][2]=-1;ListOfSensorsPerArms[2][3]=-1;ListOfSensorsPerArms[2][4]=-1;
     ListOfSensorsPerArms[2][5]=-1;ListOfSensorsPerArms[2][6]=-1;ListOfSensorsPerArms[2][7]=-1;ListOfSensorsPerArms[2][8]=-1;ListOfSensorsPerArms[2][9]=-1;ListOfSensorsPerArms[2][10]=-1;
     NumberOfSensorsToLogArm1=0;NumberOfSensorsToLogArm2=0;NumberOfSensorsToLogArm3=0; NumberOfDetectedPorts=0;
-    ui->AdressSettingsArm2PushButton->setVisible(false); ui->AdressSettingsArm3PushButton->setVisible(false);
-    AdressSettingWndArm1= new AdressSettingWindow;
-    AdressSettingWndArm1->setFixedSize(820,500);
-    AdressSettingWndArm1->setWindowTitle("Adress Settings");
-    connect(AdressSettingWndArm1,SIGNAL(AdressSettingsWindowClosedSignal()),this,SLOT(ReactToAdressSettingsWindowClosedArm1()));
-    connect(AdressSettingWndArm1,SIGNAL(AdressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
-    AdressSettingWndArm2= new AdressSettingWindow;
-    AdressSettingWndArm2->setFixedSize(820,500);
-    AdressSettingWndArm2->setWindowTitle("Adress Settings");
-    connect(AdressSettingWndArm2,SIGNAL(AdressSettingsWindowClosedSignal()),this,SLOT(ReactToAdressSettingsWindowClosedArm2()));
-    connect(AdressSettingWndArm2,SIGNAL(AdressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
-    AdressSettingWndArm3= new AdressSettingWindow;
-    AdressSettingWndArm3->setFixedSize(820,500);
-    AdressSettingWndArm3->setWindowTitle("Adress Settings");
-    connect(AdressSettingWndArm3,SIGNAL(AdressSettingsWindowClosedSignal()),this,SLOT(ReactToAdressSettingsWindowClosedArm3()));
-    connect(AdressSettingWndArm3,SIGNAL(AdressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
+    ui->AddressSettingsArm2PushButton->setVisible(false); ui->AddressSettingsArm3PushButton->setVisible(false);
+    AddressSettingWndArm1= new AddressSettingWindow;
+    AddressSettingWndArm1->setFixedSize(820,500);
+    AddressSettingWndArm1->setWindowTitle("Address Settings");
+    connect(AddressSettingWndArm1,SIGNAL(AddressSettingsWindowClosedSignal()),this,SLOT(ReactToAddressSettingsWindowClosedArm1()));
+    connect(AddressSettingWndArm1,SIGNAL(AddressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
+    AddressSettingWndArm2= new AddressSettingWindow;
+    AddressSettingWndArm2->setFixedSize(820,500);
+    AddressSettingWndArm2->setWindowTitle("Address Settings");
+    connect(AddressSettingWndArm2,SIGNAL(AddressSettingsWindowClosedSignal()),this,SLOT(ReactToAddressSettingsWindowClosedArm2()));
+    connect(AddressSettingWndArm2,SIGNAL(AddressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
+    AddressSettingWndArm3= new AddressSettingWindow;
+    AddressSettingWndArm3->setFixedSize(820,500);
+    AddressSettingWndArm3->setWindowTitle("Address Settings");
+    connect(AddressSettingWndArm3,SIGNAL(AddressSettingsWindowClosedSignal()),this,SLOT(ReactToAddressSettingsWindowClosedArm3()));
+    connect(AddressSettingWndArm3,SIGNAL(AddressConfigurationIsInvalid(int)),this,SLOT(PromptErrorToScreen(int)));
     ui->Port2Label->setVisible(false); ui->Port2SelectionComboBox->setVisible(false); ui->Port2SelectionComboBox->setDisabled(true);
     ui->Port3Label->setVisible(false); ui->Port3SelectionComboBox->setVisible(false); ui->Port3SelectionComboBox->setDisabled(true);
     ui->communicationSettingsGroupBox->setFixedHeight(111);
@@ -108,7 +108,7 @@ void MainWindow::on_numberOfArmsSpinBox_valueChanged(int arg1)
         ui->arm1LoggingSettingsGroupBox->move(28,75); ui->SelectAllArm1PushButton->move(550,100); ui->ClearAllArm1PushButton->move(550,130);
         ui->selectDataTypeLabel->move(30,10);
         ui->dataTypeToLogComboBox->move(232,15);
-        ui->AdressSettingsArm2PushButton->setVisible(false);
+        ui->AddressSettingsArm2PushButton->setVisible(false);
         Griper2->GripperEnabled=false; Griper3->GripperEnabled=false;
         ui->Port2Label->setVisible(false); ui->Port2SelectionComboBox->setVisible(false);
         ui->communicationSettingsGroupBox->setFixedHeight(111);
@@ -130,7 +130,7 @@ void MainWindow::on_numberOfArmsSpinBox_valueChanged(int arg1)
         ui->arm1LoggingSettingsGroupBox->move(28,75); ui->SelectAllArm1PushButton->move(550,100); ui->ClearAllArm1PushButton->move(550,130);
         ui->selectDataTypeLabel->move(30,10);
         ui->dataTypeToLogComboBox->move(232,15);
-        ui->AdressSettingsArm2PushButton->setVisible(true);ui->AdressSettingsArm3PushButton->setVisible(false);
+        ui->AddressSettingsArm2PushButton->setVisible(true);ui->AddressSettingsArm3PushButton->setVisible(false);
         Griper2->GripperEnabled=true; Griper3->GripperEnabled=false;
         ui->Port2Label->setVisible(true); ui->Port2SelectionComboBox->setVisible(true);
         ui->Port3Label->setVisible(false); ui->Port3SelectionComboBox->setVisible(false);
@@ -148,7 +148,7 @@ void MainWindow::on_numberOfArmsSpinBox_valueChanged(int arg1)
         ui->communicationSettingsGroupBox->move(330,130);
         NumberOfArms=3;
         ui->arm3LoggingSettingsGroupBox->setVisible(true);
-        ui->AdressSettingsArm2PushButton->setVisible(true); ui->AdressSettingsArm3PushButton->setVisible(true);
+        ui->AddressSettingsArm2PushButton->setVisible(true); ui->AddressSettingsArm3PushButton->setVisible(true);
         Griper3->GripperEnabled=true;
         ui->Port2Label->setVisible(true); ui->Port2SelectionComboBox->setVisible(true);
         ui->Port3Label->setVisible(true); ui->Port3SelectionComboBox->setVisible(true);
@@ -541,64 +541,64 @@ void MainWindow::on_ClearAllArm3PushButton_clicked()
     ui->Arm3Sensor9CheckBox->setChecked(false);ui->Arm3Sensor10CheckBox->setChecked(false);
 }
 
-void MainWindow::on_AdressSettingsArm1PushButton_clicked()
+void MainWindow::on_AddressSettingsArm1PushButton_clicked()
 {
-    AdressSettingWndArm1->show();
-    ui->AdressSettingsArm1PushButton->setDisabled(true);
-    ui->AdressSettingsArm2PushButton->setDisabled(true);
-    ui->AdressSettingsArm3PushButton->setDisabled(true);
+    AddressSettingWndArm1->show();
+    ui->AddressSettingsArm1PushButton->setDisabled(true);
+    ui->AddressSettingsArm2PushButton->setDisabled(true);
+    ui->AddressSettingsArm3PushButton->setDisabled(true);
 }
 
-void MainWindow::on_AdressSettingsArm2PushButton_clicked()
+void MainWindow::on_AddressSettingsArm2PushButton_clicked()
 {
-    AdressSettingWndArm2->show();
-    ui->AdressSettingsArm1PushButton->setDisabled(true);
-    ui->AdressSettingsArm2PushButton->setDisabled(true);
-    ui->AdressSettingsArm3PushButton->setDisabled(true);
+    AddressSettingWndArm2->show();
+    ui->AddressSettingsArm1PushButton->setDisabled(true);
+    ui->AddressSettingsArm2PushButton->setDisabled(true);
+    ui->AddressSettingsArm3PushButton->setDisabled(true);
 }
 
-void MainWindow::on_AdressSettingsArm3PushButton_clicked()
+void MainWindow::on_AddressSettingsArm3PushButton_clicked()
 {
-    AdressSettingWndArm3->show();
-    ui->AdressSettingsArm1PushButton->setDisabled(true);
-    ui->AdressSettingsArm2PushButton->setDisabled(true);
-    ui->AdressSettingsArm3PushButton->setDisabled(true);
+    AddressSettingWndArm3->show();
+    ui->AddressSettingsArm1PushButton->setDisabled(true);
+    ui->AddressSettingsArm2PushButton->setDisabled(true);
+    ui->AddressSettingsArm3PushButton->setDisabled(true);
 }
 
-void MainWindow::ReactToAdressSettingsWindowClosedArm1()
+void MainWindow::ReactToAddressSettingsWindowClosedArm1()
 {
-    ui->AdressSettingsArm1PushButton->setEnabled(true);
-    ui->AdressSettingsArm2PushButton->setEnabled(true);
-    ui->AdressSettingsArm3PushButton->setEnabled(true);
-    Griper1->SensorAdress[0]=AdressSettingWndArm1->AdressConfiguration[0];Griper1->SensorAdress[1]=AdressSettingWndArm1->AdressConfiguration[1];
-    Griper1->SensorAdress[2]=AdressSettingWndArm1->AdressConfiguration[2];Griper1->SensorAdress[3]=AdressSettingWndArm1->AdressConfiguration[3];
-    Griper1->SensorAdress[4]=AdressSettingWndArm1->AdressConfiguration[4];Griper1->SensorAdress[5]=AdressSettingWndArm1->AdressConfiguration[5];
-    Griper1->SensorAdress[6]=AdressSettingWndArm1->AdressConfiguration[6];Griper1->SensorAdress[7]=AdressSettingWndArm1->AdressConfiguration[7];
-    Griper1->SensorAdress[8]=AdressSettingWndArm1->AdressConfiguration[8];Griper1->SensorAdress[9]=AdressSettingWndArm1->AdressConfiguration[9];
+    ui->AddressSettingsArm1PushButton->setEnabled(true);
+    ui->AddressSettingsArm2PushButton->setEnabled(true);
+    ui->AddressSettingsArm3PushButton->setEnabled(true);
+    Griper1->SensorAddress[0]=AddressSettingWndArm1->AddressConfiguration[0];Griper1->SensorAddress[1]=AddressSettingWndArm1->AddressConfiguration[1];
+    Griper1->SensorAddress[2]=AddressSettingWndArm1->AddressConfiguration[2];Griper1->SensorAddress[3]=AddressSettingWndArm1->AddressConfiguration[3];
+    Griper1->SensorAddress[4]=AddressSettingWndArm1->AddressConfiguration[4];Griper1->SensorAddress[5]=AddressSettingWndArm1->AddressConfiguration[5];
+    Griper1->SensorAddress[6]=AddressSettingWndArm1->AddressConfiguration[6];Griper1->SensorAddress[7]=AddressSettingWndArm1->AddressConfiguration[7];
+    Griper1->SensorAddress[8]=AddressSettingWndArm1->AddressConfiguration[8];Griper1->SensorAddress[9]=AddressSettingWndArm1->AddressConfiguration[9];
 }
 
-void MainWindow::ReactToAdressSettingsWindowClosedArm2()
+void MainWindow::ReactToAddressSettingsWindowClosedArm2()
 {
-    ui->AdressSettingsArm1PushButton->setEnabled(true);
-    ui->AdressSettingsArm2PushButton->setEnabled(true);
-    ui->AdressSettingsArm3PushButton->setEnabled(true);
-    Griper2->SensorAdress[0]=AdressSettingWndArm2->AdressConfiguration[0];Griper2->SensorAdress[1]=AdressSettingWndArm2->AdressConfiguration[1];
-    Griper2->SensorAdress[2]=AdressSettingWndArm2->AdressConfiguration[2];Griper2->SensorAdress[3]=AdressSettingWndArm2->AdressConfiguration[3];
-    Griper2->SensorAdress[4]=AdressSettingWndArm2->AdressConfiguration[4];Griper2->SensorAdress[5]=AdressSettingWndArm2->AdressConfiguration[5];
-    Griper2->SensorAdress[6]=AdressSettingWndArm2->AdressConfiguration[6];Griper2->SensorAdress[7]=AdressSettingWndArm2->AdressConfiguration[7];
-    Griper2->SensorAdress[8]=AdressSettingWndArm2->AdressConfiguration[8];Griper2->SensorAdress[9]=AdressSettingWndArm2->AdressConfiguration[9];
+    ui->AddressSettingsArm1PushButton->setEnabled(true);
+    ui->AddressSettingsArm2PushButton->setEnabled(true);
+    ui->AddressSettingsArm3PushButton->setEnabled(true);
+    Griper2->SensorAddress[0]=AddressSettingWndArm2->AddressConfiguration[0];Griper2->SensorAddress[1]=AddressSettingWndArm2->AddressConfiguration[1];
+    Griper2->SensorAddress[2]=AddressSettingWndArm2->AddressConfiguration[2];Griper2->SensorAddress[3]=AddressSettingWndArm2->AddressConfiguration[3];
+    Griper2->SensorAddress[4]=AddressSettingWndArm2->AddressConfiguration[4];Griper2->SensorAddress[5]=AddressSettingWndArm2->AddressConfiguration[5];
+    Griper2->SensorAddress[6]=AddressSettingWndArm2->AddressConfiguration[6];Griper2->SensorAddress[7]=AddressSettingWndArm2->AddressConfiguration[7];
+    Griper2->SensorAddress[8]=AddressSettingWndArm2->AddressConfiguration[8];Griper2->SensorAddress[9]=AddressSettingWndArm2->AddressConfiguration[9];
 }
 
-void MainWindow::ReactToAdressSettingsWindowClosedArm3()
+void MainWindow::ReactToAddressSettingsWindowClosedArm3()
 {
-    ui->AdressSettingsArm1PushButton->setEnabled(true);
-    ui->AdressSettingsArm2PushButton->setEnabled(true);
-    ui->AdressSettingsArm3PushButton->setEnabled(true);
-    Griper3->SensorAdress[0]=AdressSettingWndArm3->AdressConfiguration[0];Griper3->SensorAdress[1]=AdressSettingWndArm3->AdressConfiguration[1];
-    Griper3->SensorAdress[2]=AdressSettingWndArm3->AdressConfiguration[2];Griper3->SensorAdress[3]=AdressSettingWndArm3->AdressConfiguration[3];
-    Griper3->SensorAdress[4]=AdressSettingWndArm3->AdressConfiguration[4];Griper3->SensorAdress[5]=AdressSettingWndArm3->AdressConfiguration[5];
-    Griper3->SensorAdress[6]=AdressSettingWndArm3->AdressConfiguration[6];Griper3->SensorAdress[7]=AdressSettingWndArm3->AdressConfiguration[7];
-    Griper3->SensorAdress[8]=AdressSettingWndArm3->AdressConfiguration[8];Griper3->SensorAdress[9]=AdressSettingWndArm3->AdressConfiguration[9];
+    ui->AddressSettingsArm1PushButton->setEnabled(true);
+    ui->AddressSettingsArm2PushButton->setEnabled(true);
+    ui->AddressSettingsArm3PushButton->setEnabled(true);
+    Griper3->SensorAddress[0]=AddressSettingWndArm3->AddressConfiguration[0];Griper3->SensorAddress[1]=AddressSettingWndArm3->AddressConfiguration[1];
+    Griper3->SensorAddress[2]=AddressSettingWndArm3->AddressConfiguration[2];Griper3->SensorAddress[3]=AddressSettingWndArm3->AddressConfiguration[3];
+    Griper3->SensorAddress[4]=AddressSettingWndArm3->AddressConfiguration[4];Griper3->SensorAddress[5]=AddressSettingWndArm3->AddressConfiguration[5];
+    Griper3->SensorAddress[6]=AddressSettingWndArm3->AddressConfiguration[6];Griper3->SensorAddress[7]=AddressSettingWndArm3->AddressConfiguration[7];
+    Griper3->SensorAddress[8]=AddressSettingWndArm3->AddressConfiguration[8];Griper3->SensorAddress[9]=AddressSettingWndArm3->AddressConfiguration[9];
 }
 
 void MainWindow::on_PortSelectionComboBox_currentIndexChanged(int index)
@@ -637,163 +637,163 @@ void MainWindow::GetLoggingAndVisualizationInfo()
 
     if(ui->Arm1Sensor1CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[0];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[0];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor2CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[1];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[1];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor3CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[2];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[2];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor4CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[3];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[3];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor5CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[4];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[4];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor6CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[5];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[5];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor7CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[6];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[6];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor8CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[7];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[7];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor9CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[8];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[8];
         NumberOfSensorsToLogArm1++;
     }
     if(ui->Arm1Sensor10CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAdress[9];
+        ListOfSensorsPerArms[0][NumberOfSensorsToLogArm1]=Griper1->SensorAddress[9];
         NumberOfSensorsToLogArm1++;
     }
 
     if(ui->Arm2Sensor1CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[0];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[0];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor2CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[1];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[1];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor3CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[2];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[2];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor4CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[3];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[3];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor5CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[4];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[4];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor6CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[5];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[5];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor7CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[6];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[6];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor8CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[7];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[7];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor9CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[8];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[8];
         NumberOfSensorsToLogArm2++;
     }
     if(ui->Arm2Sensor10CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAdress[9];
+        ListOfSensorsPerArms[1][NumberOfSensorsToLogArm2]=Griper2->SensorAddress[9];
         NumberOfSensorsToLogArm2++;
     }
 
     if(ui->Arm3Sensor1CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[0];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[0];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor2CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[1];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[1];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor3CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[2];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[2];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor4CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[3];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[3];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor5CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[4];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[4];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor6CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[5];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[5];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor7CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[6];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[6];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor8CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[7];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[7];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor9CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[8];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[8];
         NumberOfSensorsToLogArm3++;
     }
     if(ui->Arm3Sensor10CheckBox->isChecked()==true)
     {
-        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAdress[9];
+        ListOfSensorsPerArms[2][NumberOfSensorsToLogArm3]=Griper3->SensorAddress[9];
         NumberOfSensorsToLogArm3++;
     }
     if(EnableDatalogging==false)
     {
-        ListOfSensorsPerArms[0][0]=Griper1->SensorAdress[0];ListOfSensorsPerArms[0][1]=-1;ListOfSensorsPerArms[0][2]=-1;ListOfSensorsPerArms[0][3]=-1;ListOfSensorsPerArms[0][4]=-1;
+        ListOfSensorsPerArms[0][0]=Griper1->SensorAddress[0];ListOfSensorsPerArms[0][1]=-1;ListOfSensorsPerArms[0][2]=-1;ListOfSensorsPerArms[0][3]=-1;ListOfSensorsPerArms[0][4]=-1;
         ListOfSensorsPerArms[0][5]=-1;ListOfSensorsPerArms[0][6]=-1;ListOfSensorsPerArms[0][7]=-1;ListOfSensorsPerArms[0][8]=-1;ListOfSensorsPerArms[0][9]=-1;ListOfSensorsPerArms[0][10]=-1;
-        ListOfSensorsPerArms[1][0]=Griper2->SensorAdress[0];ListOfSensorsPerArms[1][1]=-1;ListOfSensorsPerArms[1][2]=-1;ListOfSensorsPerArms[1][3]=-1;ListOfSensorsPerArms[1][4]=-1;
+        ListOfSensorsPerArms[1][0]=Griper2->SensorAddress[0];ListOfSensorsPerArms[1][1]=-1;ListOfSensorsPerArms[1][2]=-1;ListOfSensorsPerArms[1][3]=-1;ListOfSensorsPerArms[1][4]=-1;
         ListOfSensorsPerArms[1][5]=-1;ListOfSensorsPerArms[1][6]=-1;ListOfSensorsPerArms[1][7]=-1;ListOfSensorsPerArms[1][8]=-1;ListOfSensorsPerArms[1][9]=-1;ListOfSensorsPerArms[1][10]=-1;
-        ListOfSensorsPerArms[2][0]=Griper3->SensorAdress[0];ListOfSensorsPerArms[2][1]=-1;ListOfSensorsPerArms[2][2]=-1;ListOfSensorsPerArms[2][3]=-1;ListOfSensorsPerArms[2][4]=-1;
+        ListOfSensorsPerArms[2][0]=Griper3->SensorAddress[0];ListOfSensorsPerArms[2][1]=-1;ListOfSensorsPerArms[2][2]=-1;ListOfSensorsPerArms[2][3]=-1;ListOfSensorsPerArms[2][4]=-1;
         ListOfSensorsPerArms[2][5]=-1;ListOfSensorsPerArms[2][6]=-1;ListOfSensorsPerArms[2][7]=-1;ListOfSensorsPerArms[2][8]=-1;ListOfSensorsPerArms[2][9]=-1;ListOfSensorsPerArms[2][10]=-1;
         NumberOfSensorsToLogArm1=1; NumberOfSensorsToLogArm2=1; NumberOfSensorsToLogArm3=1;
     }

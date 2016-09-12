@@ -14,28 +14,28 @@
 
 
 namespace Ui {
-class AdressSettingWindow;
+class AddressSettingWindow;
 }
 
-class AdressSettingWindow : public QWidget
+class AddressSettingWindow : public QWidget
 {
     Q_OBJECT 
 public:
-    explicit AdressSettingWindow(QWidget *parent = 0);
-    ~AdressSettingWindow();
-    int *AdressConfiguration;
+    explicit AddressSettingWindow(QWidget *parent = 0);
+    ~AddressSettingWindow();
+    int *AddressConfiguration;
 signals:
-    void AdressSettingsWindowClosedSignal();
-    void AdressConfigurationIsInvalid(int ErrorType);
+    void AddressSettingsWindowClosedSignal();
+    void AddressConfigurationIsInvalid(int ErrorType);
 private slots:
     void on_RestoreDefaultConfigurationPushButton_clicked();
 
     void on_ApplyConfigurationPushButton_clicked(bool checked);
 private:
-    Ui::AdressSettingWindow *ui;
+    Ui::AddressSettingWindow *ui;
     void closeEvent(QCloseEvent *event);
-    int Adresses[10];
-    bool AdressesAreValid;
+    int Addresses[10];
+    bool AddressesAreValid;
 };
 
 #endif // ADRESSSETTINGWINDOW_H

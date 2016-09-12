@@ -130,7 +130,7 @@ VisualizationForm::VisualizationForm(QWidget *parent, MainWindow *mainwnd) :
         {
             for(int i=0;i<MW->NumberOfSensors[0];i++)
             {
-                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAdress[i]));
+                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAddress[i]));
             }
         }
         else
@@ -150,11 +150,11 @@ VisualizationForm::VisualizationForm(QWidget *parent, MainWindow *mainwnd) :
         {
             for(int i=0;i<MW->NumberOfSensors[0];i++)
             {
-                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAdress[i]));
+                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAddress[i]));
             }
             for(int i=0;i<MW->NumberOfSensors[1];i++)
             {
-                ui->SensorArm2ComboBox->addItem(QString::number(MW->Griper2->SensorAdress[i]));
+                ui->SensorArm2ComboBox->addItem(QString::number(MW->Griper2->SensorAddress[i]));
             }
             ArmsSensorToVisualize[0]=1;ArmsSensorToVisualize[1]=1;ArmsSensorToVisualize[2]=-1;
         }
@@ -176,15 +176,15 @@ VisualizationForm::VisualizationForm(QWidget *parent, MainWindow *mainwnd) :
         {
             for(int i=0;i<MW->NumberOfSensors[0];i++)
             {
-                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAdress[i]));
+                ui->SensorArm1ComboBox->addItem(QString::number(MW->Griper1->SensorAddress[i]));
             }
             for(int i=0;i<MW->NumberOfSensors[1];i++)
             {
-                ui->SensorArm2ComboBox->addItem(QString::number(MW->Griper2->SensorAdress[i]));
+                ui->SensorArm2ComboBox->addItem(QString::number(MW->Griper2->SensorAddress[i]));
             }
             for(int i=0;i<MW->NumberOfSensors[2];i++)
             {
-                ui->SensorArm3ComboBox->addItem(QString::number(MW->Griper3->SensorAdress[i]));
+                ui->SensorArm3ComboBox->addItem(QString::number(MW->Griper3->SensorAddress[i]));
             }
         }
         else
@@ -243,11 +243,11 @@ VisualizationForm::VisualizationForm(QWidget *parent, MainWindow *mainwnd) :
         ui->displayValuesCheckbox->setVisible(false);
         ui->Sensor1Label->setVisible(true);ui->Sensor2Label->setVisible(true);ui->Sensor3Label->setVisible(true);ui->Sensor4Label->setVisible(true);ui->Sensor5Label->setVisible(true);
         ui->Sensor6Label->setVisible(true);ui->Sensor7Label->setVisible(true);ui->Sensor8Label->setVisible(true);ui->Sensor9Label->setVisible(true);ui->Sensor10Label->setVisible(true);
-        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[1]));
-        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[3]));
-        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[5]));
-        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[7]));
-        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[7]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[9]));
+        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[1]));
+        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[3]));
+        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[5]));
+        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[7]));
+        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[7]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[9]));
         ui->CurrentFrequencyLabel->setVisible(false); ui->STFACheckbox->setVisible(false);
     }
     if(MW->DataKind==1 && MW->EnableDatalogging==true)
@@ -663,15 +663,15 @@ void VisualizationForm::on_ViewComboBox_currentIndexChanged(int index)
         ui->RotateDownPushButton->setVisible(false);ui->RotateLeftPushButton->setVisible(false); ui->RotateRightPushButton->setVisible(false); ui->RotateUpPushButton->setVisible(false);
         CurrentArmToVisualize=0;ui->visualizeArm1CheckBox->setChecked(true); ui->visualizeArm2CheckBox->setChecked(false); ui->visualizeArm3CheckBox->setChecked(false);
         MW->NumberOfSensorsToLogArm1=10; MW->NumberOfSensorsToLogArm2=10; MW->NumberOfSensorsToLogArm3=10;
-        MW->ListOfSensorsPerArms[0][0]=MW->Griper1->SensorAdress[0];MW->ListOfSensorsPerArms[0][1]=MW->Griper1->SensorAdress[1];MW->ListOfSensorsPerArms[0][2]=MW->Griper1->SensorAdress[2];MW->ListOfSensorsPerArms[0][3]=MW->Griper1->SensorAdress[3];
-        MW->ListOfSensorsPerArms[0][4]=MW->Griper1->SensorAdress[4];MW->ListOfSensorsPerArms[0][5]=MW->Griper1->SensorAdress[5];MW->ListOfSensorsPerArms[0][6]=MW->Griper1->SensorAdress[6];MW->ListOfSensorsPerArms[0][7]=MW->Griper1->SensorAdress[7];
-        MW->ListOfSensorsPerArms[0][8]=MW->Griper1->SensorAdress[8];MW->ListOfSensorsPerArms[0][9]=MW->Griper1->SensorAdress[9];
-        MW->ListOfSensorsPerArms[1][0]=MW->Griper2->SensorAdress[0];MW->ListOfSensorsPerArms[1][1]=MW->Griper2->SensorAdress[1];MW->ListOfSensorsPerArms[1][2]=MW->Griper2->SensorAdress[2];MW->ListOfSensorsPerArms[1][3]=MW->Griper2->SensorAdress[3];
-        MW->ListOfSensorsPerArms[1][4]=MW->Griper2->SensorAdress[4];MW->ListOfSensorsPerArms[1][5]=MW->Griper2->SensorAdress[5];MW->ListOfSensorsPerArms[1][6]=MW->Griper2->SensorAdress[6];MW->ListOfSensorsPerArms[1][7]=MW->Griper2->SensorAdress[7];
-        MW->ListOfSensorsPerArms[1][8]=MW->Griper2->SensorAdress[8];MW->ListOfSensorsPerArms[1][9]=MW->Griper2->SensorAdress[9];
-        MW->ListOfSensorsPerArms[2][0]=MW->Griper3->SensorAdress[0];MW->ListOfSensorsPerArms[2][1]=MW->Griper3->SensorAdress[1];MW->ListOfSensorsPerArms[2][2]=MW->Griper3->SensorAdress[2];MW->ListOfSensorsPerArms[2][3]=MW->Griper3->SensorAdress[3];
-        MW->ListOfSensorsPerArms[2][4]=MW->Griper3->SensorAdress[4];MW->ListOfSensorsPerArms[2][5]=MW->Griper3->SensorAdress[5];MW->ListOfSensorsPerArms[2][6]=MW->Griper3->SensorAdress[6];MW->ListOfSensorsPerArms[2][7]=MW->Griper3->SensorAdress[7];
-        MW->ListOfSensorsPerArms[2][8]=MW->Griper3->SensorAdress[8];MW->ListOfSensorsPerArms[2][9]=MW->Griper3->SensorAdress[9];
+        MW->ListOfSensorsPerArms[0][0]=MW->Griper1->SensorAddress[0];MW->ListOfSensorsPerArms[0][1]=MW->Griper1->SensorAddress[1];MW->ListOfSensorsPerArms[0][2]=MW->Griper1->SensorAddress[2];MW->ListOfSensorsPerArms[0][3]=MW->Griper1->SensorAddress[3];
+        MW->ListOfSensorsPerArms[0][4]=MW->Griper1->SensorAddress[4];MW->ListOfSensorsPerArms[0][5]=MW->Griper1->SensorAddress[5];MW->ListOfSensorsPerArms[0][6]=MW->Griper1->SensorAddress[6];MW->ListOfSensorsPerArms[0][7]=MW->Griper1->SensorAddress[7];
+        MW->ListOfSensorsPerArms[0][8]=MW->Griper1->SensorAddress[8];MW->ListOfSensorsPerArms[0][9]=MW->Griper1->SensorAddress[9];
+        MW->ListOfSensorsPerArms[1][0]=MW->Griper2->SensorAddress[0];MW->ListOfSensorsPerArms[1][1]=MW->Griper2->SensorAddress[1];MW->ListOfSensorsPerArms[1][2]=MW->Griper2->SensorAddress[2];MW->ListOfSensorsPerArms[1][3]=MW->Griper2->SensorAddress[3];
+        MW->ListOfSensorsPerArms[1][4]=MW->Griper2->SensorAddress[4];MW->ListOfSensorsPerArms[1][5]=MW->Griper2->SensorAddress[5];MW->ListOfSensorsPerArms[1][6]=MW->Griper2->SensorAddress[6];MW->ListOfSensorsPerArms[1][7]=MW->Griper2->SensorAddress[7];
+        MW->ListOfSensorsPerArms[1][8]=MW->Griper2->SensorAddress[8];MW->ListOfSensorsPerArms[1][9]=MW->Griper2->SensorAddress[9];
+        MW->ListOfSensorsPerArms[2][0]=MW->Griper3->SensorAddress[0];MW->ListOfSensorsPerArms[2][1]=MW->Griper3->SensorAddress[1];MW->ListOfSensorsPerArms[2][2]=MW->Griper3->SensorAddress[2];MW->ListOfSensorsPerArms[2][3]=MW->Griper3->SensorAddress[3];
+        MW->ListOfSensorsPerArms[2][4]=MW->Griper3->SensorAddress[4];MW->ListOfSensorsPerArms[2][5]=MW->Griper3->SensorAddress[5];MW->ListOfSensorsPerArms[2][6]=MW->Griper3->SensorAddress[6];MW->ListOfSensorsPerArms[2][7]=MW->Griper3->SensorAddress[7];
+        MW->ListOfSensorsPerArms[2][8]=MW->Griper3->SensorAddress[8];MW->ListOfSensorsPerArms[2][9]=MW->Griper3->SensorAddress[9];
         ui->displayValuesCheckbox->setVisible(false);ui->displayValuesCheckbox->setChecked(false);
         ui->TaxelVal1->setVisible(false);ui->TaxelVal2->setVisible(false);ui->TaxelVal3->setVisible(false);ui->TaxelVal4->setVisible(false);
         ui->TaxelVal5->setVisible(false);ui->TaxelVal6->setVisible(false);ui->TaxelVal7->setVisible(false);ui->TaxelVal8->setVisible(false);
@@ -841,27 +841,27 @@ void VisualizationForm::on_ViewComboBox_currentIndexChanged(int index)
         ui->sensorArm3Label->setVisible(false);
         if (ui->visualizeArm1CheckBox->isChecked()==true)
         {
-            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[1]));
-            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[3]));
-            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[5]));
-            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[7]));
-            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[9]));
+            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[1]));
+            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[3]));
+            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[5]));
+            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[7]));
+            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[9]));
         }
         else if (ui->visualizeArm2CheckBox->isChecked()==true)
         {
-            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[1]));
-            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[3]));
-            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[5]));
-            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[7]));
-            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[9]));
+            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[1]));
+            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[3]));
+            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[5]));
+            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[7]));
+            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[9]));
         }
         else if (ui->visualizeArm3CheckBox->isChecked()==true)
         {
-            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[1]));
-            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[3]));
-            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[5]));
-            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[7]));
-            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[9]));
+            ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[1]));
+            ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[3]));
+            ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[5]));
+            ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[7]));
+            ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[9]));
         }
     }
     if (index==1)
@@ -892,11 +892,11 @@ void VisualizationForm::on_visualizeArm1CheckBox_clicked(bool checked)
         ui->SensorArm1ComboBox->setEnabled(true);
         ui->SensorArm2ComboBox->setDisabled(true);
         ui->SensorArm3ComboBox->setDisabled(true);
-        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[1]));
-        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[3]));
-        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[5]));
-        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[7]));
-        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAdress[9]));
+        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[1]));
+        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[3]));
+        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[5]));
+        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[7]));
+        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper1->SensorAddress[9]));
         CurrentArmToVisualize=0;
     }
     else
@@ -915,11 +915,11 @@ void VisualizationForm::on_visualizeArm2CheckBox_clicked(bool checked)
         ui->SensorArm1ComboBox->setDisabled(true);
         ui->SensorArm2ComboBox->setEnabled(true);
         ui->SensorArm3ComboBox->setDisabled(true);
-        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[1]));
-        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[3]));
-        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[5]));
-        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[7]));
-        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper2->SensorAdress[9]));
+        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[1]));
+        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[3]));
+        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[5]));
+        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[7]));
+        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper2->SensorAddress[9]));
         CurrentArmToVisualize=1;
     }
     else
@@ -938,11 +938,11 @@ void VisualizationForm::on_visualizeArm3CheckBox_clicked(bool checked)
         ui->SensorArm1ComboBox->setDisabled(true);
         ui->SensorArm2ComboBox->setDisabled(true);
         ui->SensorArm3ComboBox->setEnabled(true);
-        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[1]));
-        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[3]));
-        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[5]));
-        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[7]));
-        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper3->SensorAdress[9]));
+        ui->Sensor1Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[0]));ui->Sensor2Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[1]));
+        ui->Sensor3Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[2]));ui->Sensor4Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[3]));
+        ui->Sensor5Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[4]));ui->Sensor6Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[5]));
+        ui->Sensor7Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[6]));ui->Sensor8Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[7]));
+        ui->Sensor9Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[8]));ui->Sensor10Label->setText("Sensor " + QString::number(MW->Griper3->SensorAddress[9]));
         CurrentArmToVisualize=2;
     }
     else
@@ -959,7 +959,7 @@ void VisualizationForm::on_SensorArm1ComboBox_currentIndexChanged(int index)
     }
     else
     {
-        CurrentSensorToVisualize=MW->Griper1->SensorAdress[index];
+        CurrentSensorToVisualize=MW->Griper1->SensorAddress[index];
         MW->ListOfSensorsPerArms[0][0]=CurrentSensorToVisualize;
     }
     ResetButtonIsPushed=true;

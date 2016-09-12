@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AdressSettingWindow</class>
- <widget class="QWidget" name="AdressSettingWindow">
+ <class>AddressSettingWindow</class>
+ <widget class="QWidget" name="AddressSettingWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -446,7 +446,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="../images/images.qrc">:/AdressHand3.png</pixmap>
+    <pixmap resource="../images/images.qrc">:/AddressHand3.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

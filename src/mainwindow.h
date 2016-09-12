@@ -58,9 +58,9 @@ private slots:
     void on_ClearAllArm2PushButton_clicked();
     void on_SelectAllArm3PushButton_clicked();
     void on_ClearAllArm3PushButton_clicked();
-    void on_AdressSettingsArm1PushButton_clicked();
-    void on_AdressSettingsArm2PushButton_clicked();
-    void on_AdressSettingsArm3PushButton_clicked();
+    void on_AddressSettingsArm1PushButton_clicked();
+    void on_AddressSettingsArm2PushButton_clicked();
+    void on_AddressSettingsArm3PushButton_clicked();
     void on_PortSelectionComboBox_currentIndexChanged(int index);
     void on_Port2SelectionComboBox_currentIndexChanged(int index);
     void on_Port3SelectionComboBox_currentIndexChanged(int index);
@@ -69,16 +69,16 @@ private slots:
 public slots:
     void ToggleStartStopButton();
     void PromptErrorToScreen(int ErrorType);
-    void ReactToAdressSettingsWindowClosedArm1();
-    void ReactToAdressSettingsWindowClosedArm2();
-    void ReactToAdressSettingsWindowClosedArm3();
+    void ReactToAddressSettingsWindowClosedArm1();
+    void ReactToAddressSettingsWindowClosedArm2();
+    void ReactToAddressSettingsWindowClosedArm3();
     void GetLoggingAndVisualizationInfo();
 signals:
     void StopButtonPressed();
 private:
     Ui::MainWindow *ui;
     int NumberOfDetectedPorts;
-    AdressSettingWindow *AdressSettingWndArm1, *AdressSettingWndArm2, *AdressSettingWndArm3;
+    AddressSettingWindow *AddressSettingWndArm1, *AddressSettingWndArm2, *AddressSettingWndArm3;
     ChangeSensorIDForm *ChangeIDForm;
 };
 

@@ -6,10 +6,9 @@
 
 #include "gripper.h"
 
-
 Gripper::Gripper()
 {
     GripperEnabled=false;
-    SensorAdress[0]=1;SensorAdress[1]=2;SensorAdress[2]=3;SensorAdress[3]=4;SensorAdress[4]=5;
-    SensorAdress[5]=6;SensorAdress[6]=7;SensorAdress[7]=8;SensorAdress[8]=9;SensorAdress[9]=10;
+    for (int i = 0; i < 10; ++i)
+        SensorAddress[i] = i + 1;
 }

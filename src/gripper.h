@@ -12,7 +12,7 @@ class Gripper
 public:
     Gripper();
     bool GripperEnabled;
-    int SensorAdress[10];
+    int SensorAddress[10];
 };
 
 #endif // GRIPPER_H
