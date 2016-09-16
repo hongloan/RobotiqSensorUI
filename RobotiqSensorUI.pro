@@ -8,6 +8,10 @@ QT += core gui widgets
 
 QT += serialport
 
+# remove -Wextra
+CONFIG += warn_off
+QMAKE_CXXFLAGS += -Wall
+
 TARGET = RobotiqSensorUI
 TEMPLATE = app
 
@@ -34,10 +38,13 @@ win32 {
     INCLUDEPATH += "$$PWD/external/fftw-3.3.3-dll32/"
 }
 
-LIBS += -lmgl -lgsl -lfftw3-3
+LIBS += -lmgl -lgsl
 
-QMAKE_CXXFLAGS+= -fopenmp
-QMAKE_LFLAGS +=  -fopenmp
+win32: LIBS += -lfftw3-3
+linux: LIBS += -lfftw3
+
+QMAKE_CXXFLAGS += -fopenmp
+QMAKE_LFLAGS += -fopenmp
 
 SOURCES += src/main.cpp\
     src/mainwindow.cpp \
@@ -69,5 +76,8 @@ RESOURCES += \
 
 win32 {
     # a post-link step that copies dll files next to the executable because windows is retarded
-    QMAKE_POST_LINK += cp "$$PWD/external/mathgl-2.3.5.1-mingw.i686/bin/libmgl.dll" "$$PWD/external/fftw-3.3.3-dll32/libfftw3-3.dll" "$$PWD/external/pthreadGC2.dll" .
+    QMAKE_POST_LINK += cp "$$PWD/external/mathgl-2.3.5.1-mingw.i686/bin/libmgl.dll" \
+                          "$$PWD/external/fftw-3.3.3-dll32/libfftw3-3.dll" \
+                          "$$PWD/external/pthreadGC2.dll" \
+                          .
 }
